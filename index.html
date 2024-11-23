@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview</title>
+  </head>
+  <body>
+    <div class="layout-page">
+      <div class="introduce">
+        <div class="title-page">Lorem ullamco</div>
+        <div class="introduce-content">
+          <div class="list-image">
+            <img src="./image1.png" alt="" />
+            <img src="./image2.png" alt="" />
+          </div>
+          <div class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur
+            eiusmod consectetur proident Lorem reprehenderit esse do anim velit
+            in aliquip dolore ut officia. Consectetur reprehenderit proident do
+            exercitation eu. Sunt fugiat pariatur elit est laboris quis. Esse
+            mollit incididunt quis amet. Qui non irure incididunt laborum nisi
+            cillum consequat aliquip aliquip cillum in. Ut excepteur labore
+            voluptate tempor cupidatat dolor eiusmod do ipsum Lorem cupidatat do
+            labore. Proident dolore nisi eiusmod excepteur aliquip esse ut
+            excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod
+            Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim
+            commodo qui culpa cillum duis fugiat consequat pariatur.
+          </div>
+        </div>
+      </div>
+      <div class="content-page">
+        <div class="detail-content">
+          <img src="./imageContent1.png" alt="" class="item img-content" />
+          <div class="item description-content">
+            <div class="title">Lorem ipsum</div>
+            <div class="head">Excepteur eiusmod consectetur</div>
+            <div class="detail">
+              Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur.
+              Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem
+              incididunt nisi mollit nostrud. Irure velit enim elit minim
+              commodo qui culpa cillum duis fugiat consequat pariatur.
+            </div>
+          </div>
+          <div class="item description-content">
+            <div class="title">Lorem ipsum</div>
+            <div class="head">Excepteur eiusmod consectetur</div>
+            <div class="detail">
+              Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur.
+              Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem
+              incididunt nisi mollit nostrud. Irure velit enim elit minim
+              commodo qui culpa cillum duis fugiat consequat pariatur.
+            </div>
+          </div>
+          <img src="./imageContent2.png" alt="" class="item img-content" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .layout-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    font-family: "Lato", "Times New Roman", Times, serif;
+    .introduce {
+      width: 70%;
+      .title-page {
+        font-size: 40px;
+        text-align: center;
+      }
+      .introduce-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .list-image {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          padding: 2rem 0;
+          img {
+            border-radius: 16px;
+          }
+        }
+        .description {
+          text-align: center;
+        }
+
+        @media (max-width: 960px) {
+          .list-image {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+    .content-page {
+      .detail-content {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 50% 1fr;
+        .item {
+          border-radius: 24px;
+        }
+        .img-content {
+          width: 100%;
+        }
+        .description-content {
+          background-color: #f4f0ea;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          padding: 2rem;
+          gap: 2rem;
+          .title {
+            font-size: 64px;
+            font-weight: 700;
+          }
+          .title {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .detail {
+            font-size: 14px;
+          }
+        }
+      }
+      @media (max-width: 960px) {
+        .detail-content {
+          grid-template-columns: 1fr;
+        }
+        .item:nth-child(3) {
+          order: 4;
+        }
+        .item:nth-child(4) {
+          order: 3;
+        }
+      }
+    }
+  }
+</style>
